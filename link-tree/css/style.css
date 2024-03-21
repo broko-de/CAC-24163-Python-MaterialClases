@@ -52,6 +52,24 @@ body {
     fill: #ed4d82;
   }
   
+  .parpadeo {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    animation: parpadeo 1s infinite alternate;
+    font-size: 10px;
+  }
+
+  @keyframes parpadeo {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+  }
+  
   @media screen and (max-width: 767px) {
     .container {
         max-width: 540px;
@@ -60,4 +78,12 @@ body {
     .link {
       width: 100%;
     }
+    
+    .parpadeo{
+      display: block;
+      width: 25%;
+      margin: 0 auto;
+    }
   }
+
+  
