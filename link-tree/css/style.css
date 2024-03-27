@@ -52,6 +52,10 @@ body {
     fill: #ed4d82;
   }
   
+  .importante{
+    font-weight: bold;
+  }
+  
   .parpadeo {
     background-color: red;
     color: white;
