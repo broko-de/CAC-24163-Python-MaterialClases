@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CAC-Movies</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/register.css?v=1.1">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../">
+                    <i class="fas fa-film"></i>
+                    <span class="logo-texto">
+                        CAC - Movies
+                    </span>
+                </a>
+            </div>
+            
+            <!-- <a href="#"><img src="./img/registration_2/logo.svg" alt="logo"></a> -->
+        </nav>
+    </header>
+    <main>
+        <section class="form-wrapper">
+            <h2>Registro</h2>
+            <form action="#" id="formRegister" method="GET" novalidate>
+                <div class="form-control">
+                    <label>Nombre</label>
+                    <input type="text" required name="firstname" id="firstname" >
+                </div>
+                <div class="error" id="error-firstname"></div>
+                <div class="form-control">
+                    <label>Apellido</label>
+                    <input type="text" required name="lastname" id="lastname">
+                </div>
+                <div class="error" id="error-lastname"></div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" required name="email" id="email">
+                </div>
+                <div class="error" id="error-email"></div>
+                <div class="form-control">
+                    <label>Contraseña</label>
+                    <input type="password" required name="password" id="password">
+                </div>
+                <div class="error" id="error-password"></div>
+                <div class="form-control">
+                    <label id="label-birthdate">Fecha de Nacimiento</label>
+                    <input type="date" required name="birthdate" id="birthdate">
+                </div>
+                <div class="form-control">
+                    <select name="country" id="country" class="form-select">
+                        <option value="">País</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                </div>
+                <div class="form-terms"> 
+                    <div class="terms">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">Acepto términos y condiciones</label>
+                    </div>
+                </div>
+                <button type="submit" id="btn-send">Registrarse</button>
+                <div class="form-help"> 
+                    <a href="#">Necesitas ayuda?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/js/validation-register.js"></script>
+</body>

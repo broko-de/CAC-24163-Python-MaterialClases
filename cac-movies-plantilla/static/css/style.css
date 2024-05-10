@@ -1,0 +1,534 @@
+/* 
+primary: var(--primary-color)
+secondary: var(--secondary-color)
+third: var(--third-color)
+*/
+/* :root{
+    --bg-color:#2a2a2a;
+    --primary-color:#b1dd00;
+    --secondary-color:#143954;
+    --third-color:#62828f;
+    --third-bis-color:#62828ff2;
+    --bg-input-color:rgba(255,255,255,0.1);
+} */
+
+:root{
+    --bg-color:#181419;
+    --primary-color:#9f3647;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color:#FFF;
+    font-size: 2vw;
+}
+
+.header{
+    background-color: transparent;
+    color:#FFF; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.scrolled{
+    background-color: var(--third-color);
+}
+
+nav{
+    display: flex;
+    /* flex-direction: column; */
+    /* Alinear con respecto al eje principal */
+    justify-content: space-between;
+    height: 60px;
+    /* Alinear con respecto al eje secundario */
+    align-items: center;
+    padding: 0px 50px;
+}
+
+/* SELECTOR POR IDENTIFICADOR */
+#logo{
+    font-weight: bold;
+}
+
+#logo a{
+    color: white;
+    text-decoration: none;
+}
+
+#logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* SELECTOR POR CLASE */
+.nav-links{
+    display: flex;
+    list-style: none;    
+    gap: 50px;
+}
+
+/* SELECTORES DESCENDENTES */
+.nav-links a{
+    color: #FFF;
+    font-weight: bold;
+}
+
+.nav-links a:hover{
+    color: var(--secondary-color) ;
+}
+
+.btn-cac{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color:#FFF;
+    cursor: pointer;
+}
+
+/* Pseudoclases */
+.btn-cac:hover{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+#banner{
+    background-image: url('../img/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    /* GENERA UNA SOMBRA INTERNA EN LA SECCION DEL BANNER */
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+}
+
+.container{
+    max-width: 1200px;
+    /* MARGENES */
+    margin: 120px auto;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner-card{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 160px;
+}
+
+.banner-card h1{
+    color: #FFF;
+    font-size: 4vw;
+}
+
+/* SELECTOR DE HIJOS DIRECTOS */
+.banner-card > h2{
+    margin-bottom: 20px;
+}
+
+
+/* HERMANOS ADYACENTES */
+/* h1 + h2 {
+    color: green;
+} */
+
+/* HERMANOS EN GENERAL
+h1 ~ h2 {
+    color: aqua;
+} */
+
+#search{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-title{
+    color: white;
+    font-size: 3vw;
+}
+
+.input-search {
+    background-color: var(--bg-input-color);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0px;
+    /* QUITA EL EFECTO DE BORDE AL INPUT AL SELECCIONARLO */
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
+    font-family: 'Nunito', sans-serif;
+}
+
+#popular,#top-rated {
+    text-align: center;
+}
+
+#popular h2,#top-rated h2{
+    margin: 50px 0px;
+}
+
+.popular-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movies-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.movie-item{
+    border-radius: 20px;
+    /* cualquier contenido que se extienda más allá de los límites del contenedor será ocultado y 
+    no será visible para el usuario. Esto puede ser útil para crear efectos de recorte 
+    o para ocultar contenido que no se desea que sea visible. */
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 450ms;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+}
+
+.movie-item-img {
+    width: 200px;
+    /* en CSS se utiliza para especificar cómo se debe redimensionar y ajustar el 
+    contenido de un elemento <img> o <video>dentro de su contenedor, 
+    manteniendo su relación de aspecto original. */
+    object-fit: cover;
+}
+
+.movie-item-detail {
+    /* posiciona el elemento de forma absoluta con respecto a su contenedor principal */
+    position: absolute;
+    /* elemento se posicionará justo por encima del borde inferior de su contenedor */
+    bottom: -100%;
+    padding: 30px;
+    max-height: 100%;
+    /* se modifica la altura entre lineas del texto */
+    line-height: 15px;
+    background-color: var(--third-bis-color);
+    /* Esta propiedad establece una transición suave para el cambio de la propiedad bottom. */
+    transition: bottom 0.4s ease-in-out;
+    width: 100%;
+}
+
+.movie-item:hover{
+    /* modifica la opacididad del elemento al hacer hover */
+    opacity: 0.9;
+}
+
+.movie-item:hover .movie-item-detail {
+    /* se consigue el efecto para poder aparcer el div detalle */
+    bottom: 0;
+}
+  
+.movie-item-detail-title {
+    color: white;
+    margin: 5px 0px 0px 0px;
+    line-height: 1.2em;
+}
+  
+.movie-item-detail-subtitle {
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}
+
+.movie-item-detail-subtitle::after{
+    content: '🌟';
+}
+
+#top-rated{
+    margin: 50px 0px;
+}
+
+.movies-scroller{
+    /* Esta propiedad controla cómo se maneja el desbordamiento horizontal,se mostrará una barra de desplazamiento horizontal */
+    overflow-x: scroll;
+    /* no se mostrará ninguna barra de desplazamiento vertical */
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:0px 0px 40px 0px;
+}
+
+
+.movie-item-v2{
+    border-radius: 20px;
+    width: 170px;    
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 450ms all;
+    transform-origin: center left;
+    
+}
+
+.wrapper {
+    /* Esta propiedad establece una sombra alrededor del contenedor. */
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    width: 100%;
+    /* Esta propiedad establece la altura del contenedor. Utiliza la función calc() 
+    para calcular la altura mínima como el resultado de multiplicar 150 píxeles por 1.5 */
+    height: calc(150px*1.5);
+    overflow: hidden;
+}
+
+.movie-item-img-v2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-item-detail-v2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.movie-item-detail-title-v2 {
+    color: white;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+.movie-item-detail-title-v2:hover {
+    color: var(--primary-color);
+}
+  
+.movie-item-detail-subtitle-v2 {
+    color: white;
+    font-size: 12px;
+    margin: 3px 0px;
+}
+
+.movie-item-detail-subtitle-v2::after{
+    content: '🌟';
+}
+
+
+#footer {
+    align-items: center;
+    background-color: var(--third-color);
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+#footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color:var(--secondary-color);
+}
+
+
+
+/* REGLAS PARA MODIFICAR EL ESTILO DE LA BARRA DE DESPLAZAMIENTO */
+/* pseudo-clase se utiliza para seleccionar la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+/* Esta pseudo-clase selecciona la pista (background) de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: var(--bg-input-color); 
+}
+
+/* Handle */
+/* Esta pseudo-clase se utiliza para seleccionar el "handle" 
+(la parte de la barra de desplazamiento  que el usuario puede arrastrar para desplazarse) */
+::-webkit-scrollbar-thumb {
+    background: var(--third-color); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--third-bis-color); 
+}
+
+
+.d-form{
+    width: 50%;
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.d-iframe{
+    width: 50%;
+    padding: 0px 40px;
+}
+
+
+.img-list{
+    width: 25%;
+}
+
+.movie-detail-poster img{
+    width: 300px;
+}
+
+/* PANTALLAS GRANDES */
+@media screen and (max-width:1920px) {
+    
+}
+
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2{
+        font-size: 3vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 400px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 720px;
+    }
+    .card-banner{
+        padding: 0px 75px;
+    }
+    .movies-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .d-form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .d-iframe{
+        width: 100%;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 3vw;
+    }
+
+    .h2-subtitle{
+        font-size: 5vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 300px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 420px;
+    }
+    .card-banner{
+        padding: 0px 50px;
+    }
+    .movies-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .d-form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .d-iframe{
+        width: 100%;
+    }
+
+    .btn-cac{
+        font-size: 1vh;
+    }
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer a{
+        padding: 2px 0px;
+    }
+}

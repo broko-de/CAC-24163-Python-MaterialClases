@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-Movies</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/detail-movie.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+
+</head>
+<body>    
+    <header class="header">
+        <nav>
+            <div id="logo">
+                <a href="../">
+                    <i class="fas fa-film"></i>
+                    <span class="logo-text">
+                        CAC - Movies
+                    </span>
+                </a>
+            </div>            
+            <ul class="nav-links active">
+                <li><a href="../index.html#popular">Tendencias</a>  </li>
+                <li><a href="register.html">Registrarse</a></li>
+                <li><a class="btn-cac" href="#">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="login-text">
+                        Iniciar Sesión
+                    </span>    
+                    </a> 
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner-movie">
+            <div class="banner-container">
+                <div class="movie-detail">
+                    <div class="movie-detail-poster">
+                        <img src="../static/img/mario.jpg" alt="">
+                    </div>
+                    <div class="movie-detail-info">
+                        <div class="movie-detail-info-title">
+                            <h2>The Super Mario Bros. Movie <span>(2023)</span></h2>
+                            <p>04/05/2023 • Animation, Family, Adventure, Fantasy, Comedy • 1h 33m</p>
+                        </div>
+                        <div class="movie-detail-info-overview">
+                            <h3>Overview</h3>
+                            <p>While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.</p>                            
+                        </div>
+                        <div class="movie-detail-info-credits">
+                            <div class="movie-detail-info-credits-profile">
+                                <p>Aaron Horvath</p>
+                                <p>Director</p>
+                            </div>
+                            <div class="movie-detail-info-credits-profile">
+                                <p>Michael Jelenic</p>
+                                <p>Director</p>
+                            </div>
+                            <div class="movie-detail-info-credits-profile">
+                                <p>Matthew Fogel</p>
+                                <p>Writer</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>        
+        <section id="more-info" >
+            <div class="container">
+                <div class="more-info-movie">
+                    <div class="more-info-movie-trailer">
+                        <h3>Ver trailer</h3>
+                        <div class="more-info-movie-trailer-container">
+                            <iframe type="text/html" style="background-color: #000;" width="100%" height="315" src="//www.youtube.com/embed/RjNcTBXTk4I?autoplay=1&amp;origin=https%3A%2F%2Fwww.themoviedb.org&amp;hl=en&amp;modestbranding=1&amp;fs=1&amp;autohide=1" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    <div class="more-info-other">
+                        <div class="more-info-other-social-links">
+                            <ul>
+                                <li><a href="https://www.facebook.com/supermariomovie" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/supermariomovie" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://instagram.com/supermariomovie/"><i class="fab fa-instagram" target="_blank"></i></a></li>
+                                <li><a href="https://www.thesupermariobros.movie/"><i class="fas fa-link" target="_blank"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="more-info-other-text">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Info</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Status</strong></td>
+                                        <td>Released</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Original Language</strong></td>
+                                        <td>English</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Budget</strong></td>
+                                        <td> $100.000.000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Revenue</strong></td>
+                                        <td> $1.347.013.866,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer id="footer">
+        <a href="">Términos y condiciones</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Ayuda</a>
+        <a href="./crud-movies.html">CRUD Movies</a>
+    </footer>
+    <script src="../static/js/index.js"></script>
+</body>
+</html>

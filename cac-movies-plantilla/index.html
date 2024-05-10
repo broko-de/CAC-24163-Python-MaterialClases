@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaC-Movies</title>
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Agregar fontawesome -->
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+
+    <!-- HACEMOS REFERENCIA A UN DOCUMENTO CSS EXTERNO -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- INTERNO AL DOCUMENTO -->
+    <!-- <script>
+        alert('Hola mundo JS C#24162 😎');
+    </script> -->
+</head>
+
+<!-- Agregamos CCS en linea -->
+<body >
+    <!-- Agregar comentario -->
+    <!-- INDICAR LA CABECERA -->
+    <header class="header">
+        <!-- indica que un menu de navegacion -->
+        <nav>
+            <!-- para realizar divisiones de contenido -->
+            <div id="logo">
+                <a href="">
+                    <i class="fas fa-film"></i>
+                    <span class="logo-text">
+                        CAC MOVIES
+                    </span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <!-- etiqueta enlace - enlace interno al documento html -->
+                    <a href="#popular" >Tendencias</a>
+                </li>
+                <li>
+                    <!-- etiqueta enlace interno al proyecto -->
+                    <a href="./templates/register.html">Registrarse</a>
+                </li>
+                <li>
+                    <!-- Enlace externo -->
+                    <a href="#" target="_blank" class="btn-cac">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="login-text">
+                            Iniciar sesión
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Indicar contenido principal de la pagina -->
+    <main> 
+        <section id="banner" class="d-flex">
+            <div class="banner-card container">
+                <h1>Peliculas y series ilimitadas y mucho más</h1>
+                <h2>Disfruta donde quieras. Cancela cuando quieras</h2>
+                <a href="./templates/register.html" class="btn-cac">Registrarse</a>
+            </div>
+        </section>
+        <section id="search" class="container">
+            <h2 class="search-title">Qué estás buscando?</h2>
+            <input type="text" class="input-search" placeholder="Buscar...">
+        </section>
+
+        <!-- indica una seccion del contenido principal -->
+        <section id="popular">
+            <div class="container">
+                <h2 class="h2-subtitle">Las tendencias de hoy</h2>                
+                <div id="popular-list" class="movies-grid">
+                    <!-- <div class="movie-item">
+                        <a href="./templates/detail-movie.html" >
+                            <img  class="movie-item-img" src="./static/img/mario.jpg" alt="Pelicula de mario">
+                            <div class="movie-item-detail">
+                                <p class="movie-item-detail-title">The Super Mario Bros. Movie</p>
+                                <p class="movie-item-detail-subtitle">2023 - 7.8</p>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="top-rated">
+            <div class="container">
+                <h2 class="h2-subtitle">Las más aclamadas</h2>
+                <div id="top-rated-list" class="movies-flex movies-scroller">
+                    <div class="movie-item-v2" >
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">The Godfather</p>
+                            <p class="movie-item-detail-subtitle-v2">1972 - 8.7</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/lyQBXzOQSuE59IsHyhrp0qIiPAz.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">The Shawshank Redemption</p>
+                            <p class="movie-item-detail-subtitle-v2">1994 - 8.7</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/bMadFzhjy9T7R8J48QGq1ngWNAK.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">The Godfather Part II</p>
+                            <p class="movie-item-detail-subtitle-v2">1974 - 8.6</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ktejodbcdCPXbMMdnpI9BUxW6O8.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Dilwale Dulhania Le Jayenge</p>
+                            <p class="movie-item-detail-subtitle-v2">1995 - 8.6</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Schindler's List</p>
+                            <p class="movie-item-detail-subtitle-v2">1993 - 8.6</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Spirited Away</p>
+                            <p class="movie-item-detail-subtitle-v2">2001 - 8.6</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">12 Angry Men</p>
+                            <p class="movie-item-detail-subtitle-v2">1957 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/q719jXXEzOoYaps6babgKnONONX.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Your Name.</p>
+                            <p class="movie-item-detail-subtitle-v2">1016 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="" class="movie-item-img-v2">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Parasite</p>
+                            <p class="movie-item-detail-subtitle-v2">2019 - 8.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="ejemplo-js">
+            <p id="parrafo" style="color: #FFF;"></p>
+        </section> -->
+    </main>
+    <!-- Indicar el pie de página -->
+    <footer id="footer">
+        <a href="">Términos y condiciones</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Ayuda</a>
+        <a href="./templates/crud-movies.html">CRUD Movies</a>
+    </footer>
+
+    <!-- INTERNO AL DOCUMENTO -->
+    <script>
+        // alert('Hola mundo JS C#24162 😎');
+        // console.log('Hola por medio de la consola 😀');
+    </script>
+
+    <!-- REFERENCIA EXTERNA -->
+    <script src="./static/js/index.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+.banner-container{
+    max-width: 1200px;   
+    margin: 0 auto;
+}
+
+#banner-movie{
+    background-image: url('../img/mario-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+}
+
+.movie-detail{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+    flex-wrap: wrap;
+}
+
+.movie-detail-poster{
+    flex: 1; 
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-detail-poster img{
+    border-radius: 20px;
+}
+
+.movie-detail-info{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.movie-detail-info-title h2 span{
+    font-weight: 100;
+    color: #d8d8d8;
+}
+
+.movie-detail-info-title p{
+    color: white;
+}
+
+.movie-detail-info-overview{
+    margin: 10px 0px;
+    color: white;
+}
+
+.movie-detail-info-credits{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+
+.movie-detail-info-credits-profile p:first-child{
+    font-weight: bold;
+}
+
+#more-info{
+    margin: 50px 0px;
+}
+
+.more-info-movie{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.more-info-other{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-info-movie-trailer{    
+    flex: 1;
+    flex-basis: 60%;
+}
+
+.more-info-movie-trailer-container{
+    width: 60%;
+}
+
+
+.more-info-movie-trailer h3{
+    color:white;
+    padding-bottom: 10px;
+}
+
+.more-info-other{
+    width: 30%;
+    flex: 2;
+}
+
+.more-info-other-social-links ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+    list-style: none;
+}
+
+.more-info-other-social-links ul li a{
+    color: white;
+    font-size: 2em;
+}
+
+.more-info-other-text table{
+    color: white;
+    width: 100%;
+}
+
+.more-info-other-text table tr td{
+    padding: 5px 0px;
+}
+
+.more-info-other-text table tr td:nth-child(1){
+    width: 60%;
+}
+
+.more-info-other-text table tr td:nth-child(2){
+    width: 40%;
+}
+
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+   
+    .container{
+        max-width: 420px;
+    }
+    
+    .movie-detail{
+        gap: 30px 0px;
+    }
+
+    .movie-detail-info-title h2{
+        font-size: 6vw;
+    }
+    
+    .movie-detail-info-credits-profile{
+        width: 50%;        
+        margin: 10px 0px;
+    }
+
+    .more-info-movie{
+        padding: 20px;
+    }
+
+    .more-info-movie-trailer{
+        flex-basis: 100%;
+    }
+
+    .more-info-movie-trailer-container{
+        width: 100%;
+    }
+
+    .more-info-movie-trailer h3{
+        font-size: 3vh;
+    }
+    .more-info-other{
+        flex-basis: 100%;
+    }
+
+    .more-info-other-social-links ul{
+        justify-content: space-around;
+    }
+    
+}
