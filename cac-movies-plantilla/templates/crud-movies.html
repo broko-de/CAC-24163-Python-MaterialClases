@@ -77,11 +77,7 @@
                     <div class="form-control d-flex-column">
                         <label for="director">Director</label>
                         <input type="text" class="input-search" name="director" id="director">
-                    </div>
-                    <div class="form-control d-flex-column">
-                        <label for="rating">Rating</label>
-                        <input type="number" class="input-search" name="rating" id="rating">
-                    </div>
+                    </div>                    
                     <div class="form-control d-flex-column">
                         <label for="release-date">Fecha Lanzamiento</label>
                         <input type="date" class="input-search" name="release_date" id="release-date">
@@ -90,7 +86,7 @@
                         <label for="banner">Banner</label>
                         <input type="url" class="input-search" name="banner" id="banner-form">
                     </div>                
-                    <input type="hidden"  name="id" id="id-movie">
+                    <input type="hidden"  name="id_movie" id="id-movie">
                     <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
                 </div>
             </form> 
@@ -102,7 +98,6 @@
                     <tr>
                         <th>Titulo</th>
                         <th>Director</th>
-                        <th>Rating</th>
                         <th>Fecha de lanzamiento</th>
                         <th>Banner</th>
                         <th>Acciones</th>
@@ -132,7 +127,7 @@
     <!-- <script src="./static/js/index.js"></script> -->
     <!-- <script src="./static/js/funciones.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../static/js/crud-movies.js"></script>
+    <script src="../static/js/crud-movies-fetch.js"></script>
 
 </body>
 
