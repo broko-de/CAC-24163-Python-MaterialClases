@@ -9,9 +9,11 @@ def get_all_movies():
     movies = Movie.get_all()
     return jsonify([movie.serialize() for movie in movies])
 
-def get_movie():
-    response = {'message':'TRAER UN PELI!'}
-    return jsonify(response)
+def get_movie(movie_id):
+    movie = Movie.get_by_id(movie_id)
+    if not movie:
+        return jsonify({'message': 'Movie not found'}), 404
+    return jsonify(movie.serialize())
 
 def create_movie():
     #obtengo los datos enviados en formato json - convierte en un diccionario python

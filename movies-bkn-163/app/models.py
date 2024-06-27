@@ -15,7 +15,7 @@ class Movie:
             'id_movie':self.id_movie,
             'title':self.title,
             'director':self.director,
-            'release_date':self.release_date,
+            'release_date':self.release_date.strftime('%Y-%m-%d'),
             'banner':self.banner,
         }
 
@@ -50,20 +50,20 @@ class Movie:
         db.commit() #confirmar la accion
         cursor.close()
 
-@staticmethod
-def get_by_id(movie_id):
-    db = get_db()
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM movies WHERE id_movie = %s", (movie_id,))
-    row = cursor.fetchone()
-    cursor.close()
-    if row:
-        return Movie(id_movie=row[0], title=row[1], director=row[2], release_date=row[3], banner=row[4])
-    return None
+    @staticmethod
+    def get_by_id(movie_id):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM movies WHERE id_movie = %s", (movie_id,))
+        row = cursor.fetchone()
+        cursor.close()
+        if row:
+            return Movie(id_movie=row[0], title=row[1], director=row[2], release_date=row[3], banner=row[4])
+        return None
 
-def delete(self):
-    db = get_db()
-    cursor = db.cursor()
-    cursor.execute("DELETE FROM movies WHERE id_movie = %s", (self.id_movie,))
-    db.commit()
-    cursor.close()
+    def delete(self):
+        db = get_db()
+        cursor = db.cursor()
+        cursor.execute("DELETE FROM movies WHERE id_movie = %s", (self.id_movie,))
+        db.commit()
+        cursor.close()
